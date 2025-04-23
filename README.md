@@ -3,10 +3,6 @@
 <h1 align = center style="color:green;"> <span style="color:green;">BharatKrishiNirmaan</h1>
 
 
-<img src="app/static/images/readme/farmerr.jpg" alt="Modern Agriculture" style="width: 45%;">   <img src="app/static/images/readme/plantdisease.jpg" alt="Modern Agriculture" style="width: 45%;">
-
-<div style = " margin-top: 30px;text-align : center">
-
 </div>
 
 ## 📝 Description
@@ -29,50 +25,46 @@ MySQL </li>
 
 ## ⏳ Dataset 
 
-In this project to train the machine learning and Deep Learning models we have taken datasets from [Kaggle](https://www.kaggle.com/). 
+Our project utilizes three key datasets sourced from Kaggle, each supporting a specific model: fertilizer recommendation, crop selection, and disease identification. These datasets are crucial for training accurate, real-world AI solutions tailored for agriculture.
 
-### 1.Fertilizer Recommendation Dataset
-This dataset contains essential parameters for fertilizer recommendation models, aiding in the optimization of crop yield and soil health. The dataset includes the following fields:
+🌾 1. Fertilizer Recommendation Dataset
+Purpose:
+To recommend the most suitable fertilizer based on soil and environmental conditions.
+Features:
+🧪 N – Nitrogen content in soil
+🧪 P – Phosphorous content in soil
+🧪 K – Potassium content in soil
+🌡️ Temperature – Ambient temperature (°C)
+💧 Humidity – Relative humidity (%)
+🌱 Moisture – Soil moisture level (%)
+🌾 Crop Type – Name of the crop
+🏞️ Soil Type – Type of soil (e.g., sandy, loamy)
 
-    N: Ratio of Nitrogen content in soil
+Usage:
+Used for building custom fertilizer recommendation models that enhance soil productivity.
 
-    P: Ratio of Phosphorous content in soil
+🌱 2. Crop Recommendation Dataset
+Purpose:
+To identify the most suitable crop for cultivation based on soil nutrients and climate factors.
+Features:
+🧪 N, P, K – Macronutrient values in soil
+🌡️ Temperature – Temperature in °C
+💧 Humidity – Humidity percentage
+⚗️ pH – Soil pH level
+🌧️ Rainfall – Annual rainfall in millimeters
 
-    K: Ratio of Potassium content in soil
+Usage:
+Trained models help farmers decide the best crop to cultivate under given environmental conditions.
 
-    Temperature: Temperature in degrees Celsius
-
-    Humidity: Relative humidity in percentage
-
-    Moisture: Moisture level in percentage
-
-    Crop Type: Name of the crop
-
-    Soil Type: Type of the soil
-
- Download the fertilizer Recommendation dataset for  custom training <a href="https://github.com/usmanbvp/agri-innovative/blob/main/data/raw/fertilizer_recommendation.csv">here</a>
-
-### 2.Crop  Recommendation Dataset
-This dataset serves as a valuable resource for crop recommendation systems, aiding in the selection of optimal crops based on various soil and environmental factors. The dataset comprises the following essential fields:
-
-    N: Ratio of Nitrogen content in soil
-    
-    P: Ratio of Phosphorous content in soil
-
-    K: Ratio of Potassium content in soil
-
-    Temperature: Temperature in degrees Celsius
-
-    Humidity: Relative humidity in percentage
-
-    pH: pH value of the soil
-
-    Rainfall: Rainfall in millimeters
-
-Download the Crop Recommendation dataset for custom training <a href="https://github.com/usmanbvp/agri-innovative/blob/main/data/raw/crop_recommendation.csv">here</a>
-
- ### 3.Disease Identification Dataset
-This dataset is recreated using offline augmentation from the original dataset. This dataset consists of about 87K rgb images of healthy and diseased crop leaves which is categorized into 38 different classes. The total dataset is divided into 80/20 ratio of training and validation set preserving the directory structure. A directory containing 33 test images is created for prediction purpose.
+🍃 3. Disease Identification Dataset
+Purpose:
+To detect plant diseases using image classification with deep learning models.
+Dataset Details:
+🖼️ 87,000+ RGB images of healthy and diseased crop leaves
+📂 38 classes – Each representing a crop-disease pair
+🔄 80/20 split for training and validation
+🔬 33 test images reserved for real-time prediction validation
+🗂️ Structured in directories for easy image loading and model training
 
 Download the Disease Identification dataset for custom training <a href="https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset">here</a>
 
