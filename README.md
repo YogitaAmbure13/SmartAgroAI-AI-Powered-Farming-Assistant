@@ -30,14 +30,23 @@ Our project utilizes three key datasets sourced from Kaggle, each supporting a s
 🌾 1. Fertilizer Recommendation Dataset
 Purpose:
 To recommend the most suitable fertilizer based on soil and environmental conditions.
+
 Features:
+
 🧪 N – Nitrogen content in soil
+
 🧪 P – Phosphorous content in soil
+
 🧪 K – Potassium content in soil
+
 🌡️ Temperature – Ambient temperature (°C)
+
 💧 Humidity – Relative humidity (%)
+
 🌱 Moisture – Soil moisture level (%)
+
 🌾 Crop Type – Name of the crop
+
 🏞️ Soil Type – Type of soil (e.g., sandy, loamy)
 
 Usage:
@@ -46,11 +55,17 @@ Used for building custom fertilizer recommendation models that enhance soil prod
 🌱 2. Crop Recommendation Dataset
 Purpose:
 To identify the most suitable crop for cultivation based on soil nutrients and climate factors.
+
 Features:
+
 🧪 N, P, K – Macronutrient values in soil
+
 🌡️ Temperature – Temperature in °C
+
 💧 Humidity – Humidity percentage
+
 ⚗️ pH – Soil pH level
+
 🌧️ Rainfall – Annual rainfall in millimeters
 
 Usage:
@@ -59,11 +74,17 @@ Trained models help farmers decide the best crop to cultivate under given enviro
 🍃 3. Disease Identification Dataset
 Purpose:
 To detect plant diseases using image classification with deep learning models.
+
 Dataset Details:
+
 🖼️ 87,000+ RGB images of healthy and diseased crop leaves
+
 📂 38 classes – Each representing a crop-disease pair
+
 🔄 80/20 split for training and validation
+
 🔬 33 test images reserved for real-time prediction validation
+
 🗂️ Structured in directories for easy image loading and model training
 
 Download the Disease Identification dataset for custom training <a href="https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset">here</a>
