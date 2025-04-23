@@ -30,19 +30,6 @@ The project is organized into the following directories and files:
 - [Requirements](requirements.txt): This requirements text file contains all the required dependencies that we need to install to run the project.
 
 
-The structure of project files will look like this :
-
-<div style="display: flex; justify-content: space-between; align-items: flex-start;">
-    <div style="flex: 1; text-align: center;">
-        <p><b>Project Structure </b></p>
-        <img src="app/static/images/readme/project_files_structure.png" alt="Left Image" style="max-width: 100%;">
-    </div>
-    <div style="flex: 1; text-align: center;">
-        <p><b>App Structure</b></p>
-        <img src="app/static/images/readme/app_strucutre.png" alt="Right Image" style="max-width: 100%;">
-    </div>
-</div>
-
 ## 👨🏻‍💻Technologies Used 
  <ul>
  <li> <b>Front End: </b>   HTML, CSS, Java Script</li>
