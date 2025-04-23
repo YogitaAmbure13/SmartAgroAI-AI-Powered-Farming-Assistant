@@ -1,0 +1,32 @@
+{% extends 'layout.html' %} 
+
+{% block title %} Home  {% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home_styles.css') }}">
+{% endblock %}
+
+{% block body %}
+
+<div class="background-image">
+  <div class="heading-container">
+    <h1 class="main-heading">Make Your Farming More<br>Minimalistic & Modern</h1>
+    <h2 class="sub-sub-heading">"Elevate Your Farming Space into a Minimalistic and Modern<br>Oasis Effortlessly and Swiftly."</h2>
+  </div>
+
+  {% if current_user.is_authenticated %}
+    <!-- If user is logged in, show the Explore button -->
+    <button class="action-button button">
+      <a href="{{ url_for('services') }}">Explore More</a>
+    </button>
+  {% else %}
+    <!-- If user is NOT logged in, ask them to log in or sign up -->
+    <button class="action-button button">
+      <a href="{{ url_for('login') }}">Login / Signup to Explore</a>
+    </button>
+  {% endif %}
+</div>
+
+
+
+{% endblock %}

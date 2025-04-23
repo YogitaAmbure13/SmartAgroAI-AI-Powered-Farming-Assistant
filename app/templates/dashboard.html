@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/dashboard_styles.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="dashboard-container">
+    <!-- Header -->
+    <div class="dashboard-header">
+        <h2>🚜 Welcome to Your Farmer Dashboard 🌾</h2>
+    </div>
+
+    <!-- Farmer Info -->
+    <div class="farmer-card">
+        <div class="farmer-details">
+            <p><strong>👤 Farmer Name:</strong> {{ current_user.first_name }}</p>
+            <p><strong>📧 Email:</strong> {{ current_user.email }}</p>
+        </div>
+    </div>
+
+    <!-- Farming Details -->
+    <div class="farming-section">
+        <h3>🌱 Your Farming Details</h3>
+        <p>Manage and track your registered crops below.</p>
+    </div>
+
+    <!-- Crop Table -->
+    <div class="table-container">
+        <table class="crop-table">
+            <tr>
+                <th>🌾 Crop Name</th>
+                <th>📅 Date</th>
+                <th>🔍 View</th>
+                <th>🗑️ Delete</th>
+            </tr>
+            {% for crop in crop_details %}
+            <tr>
+                <td>{{ crop.crop_name }}</td>
+                <td>{{ crop.date_planted }}</td>
+                <td>
+                    <form action="{{ url_for('crop_detail', crop_id=crop.id) }}" method="post">
+                        <button type="submit" class="view-btn">View</button>
+                    </form>
+                </td>
+                <td>
+                    <form action="{{ url_for('crop_detail', crop_id=crop.id) }}" method="post">
+                        <button type="submit" class="delete-btn">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <!-- Add Crop -->
+    <div class="add-crop-section">
+        <a class="add-crop-btn" href="{{ url_for('add_crop') }}">➕ Add Crop</a>
+    </div>
+</div>
+{% endblock %}

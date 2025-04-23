@@ -1,0 +1,117 @@
+@import url('layout.css');
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Centered Dashboard */
+.dashboard-container {
+    max-width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+/* Welcome Section */
+.dashboard-header h2 {
+    color: #2c3e50;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Farmer Info Card */
+.farmer-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 20px auto;
+}
+
+/* Farming Details Section */
+.farming-section h3 {
+    color: #28a745;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Table Styling */
+.table-container {
+    width: 90%;
+    margin: 20px auto;
+    overflow-x: auto;
+}
+
+.crop-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.crop-table th {
+    background: #90e7b1;
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+}
+
+.crop-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.crop-table tr:hover {
+    background: #f8f8f8;
+}
+
+/* Buttons */
+.view-btn {
+    background: #17a2b8;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.view-btn:hover {
+    background: #138496;
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+}
+
+/* Add Crop Button */
+.add-crop-btn {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.add-crop-btn:hover {
+    background: #0056b3;
+}

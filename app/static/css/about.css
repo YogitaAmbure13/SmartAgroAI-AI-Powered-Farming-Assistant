@@ -1,0 +1,239 @@
+@import url('layout.css');
+
+/* Heading */
+.heading {
+    margin-top: 12px;
+    font-size: 1.75rem;
+    text-align: center;
+    padding: 18px 0;
+    color: blue;
+    font-weight: bold;
+}
+
+/* About Us Section */
+.about {
+    background-color: #f8f9fa;
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #222;
+}
+
+/* Style for the centered heading of the features section */
+.feature-heading .heading {
+    text-align: center; /* Center the heading */
+    margin-bottom: 1rem; /* Add space below the heading */
+  }
+  
+  .feature-heading .heading h1 {
+    font-size: 2rem; /* Adjust the size of the heading */
+    color: #1f1e1e; /* Set the color of the heading text */
+  }
+  
+  .feature-heading .heading p {
+    font-size: 1.2rem; /* Adjust the font size of the paragraph */
+    color: #666; /* Set the color of the paragraph text */
+    margin-top: 0.5rem; /* Add space above the paragraph */
+  }
+  
+
+/* General Feature Section */
+.feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Create two equal-width columns */
+    gap: 30px;
+    padding: 60px 5%;
+    justify-items: center; 
+    margin-bottom: 40px;
+}
+
+/* Feature Content */
+.feature-content {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.feature-content:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Text and Image Order */
+.feature.right .feature-content {
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1 / span 2; /* Stretch content across both columns */
+}
+
+/* Feature for Left Image (Text First) */
+.feature.left .feature-content {
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1 / span 2; /* Stretch content across both columns */
+}
+
+.feature-content img {
+    width: 80%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.text-content {
+    max-width: 500px;
+    padding: 0 20px;
+}
+
+.text-content h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #222;
+}
+
+.text-content p {
+    font-size: 16px;
+    color: #666;
+}
+
+
+/*members11*/
+.members .box-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    max-width: 50%; /* To limit the container width */
+    margin: 0 auto; /* Center the box container */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  /* Style for the heading text in the members section */
+.members .heading h1 {
+    font-size: 2rem;
+    color: black; /* Set the color of the heading text to black */
+  }
+  
+  /* Style for the paragraph text in the members section */
+  .members .heading p {
+    font-size: 1.2rem;
+    color: black; /* Set the color of the paragraph text to black */
+  }
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    .members .box-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+      max-width: 80%; /* Reduce width of container */
+    }
+  }
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    .members .box-container {
+      grid-template-columns: 1fr; /* 1 column for small screens */
+      max-width: 95%; /* Reduce width of container */
+    }
+  }
+  
+  .members .box {
+    width: 100%; /* Make the box take the full available width */
+    max-width: 20rem; /* Limit box width to a maximum of 20rem */
+    border: 2px black solid;
+    box-shadow: black 0px 5px 15px;
+    border-radius: 0.5rem;
+    text-align: center;
+    padding: 2.5rem;
+    margin: 0 auto; /* Center each box */
+  }
+  
+  .members .box:hover {
+    border: 2px black solid;
+    box-shadow: none;
+  }
+  
+  .members .box h3 {
+    font-size: 1.2rem;
+    padding: 0.2rem 0;
+    color: black;
+  }
+  
+  .members .box p {
+    font-size: 0.8rem;
+    padding-bottom: 2.5rem;
+    color: black;
+  }
+  
+  /* Style for the member image */
+  .box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+  }
+  
+  .box img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .box h3,
+  .box p {
+    margin: 10px 0;
+  }
+  
+  .all-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .all-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Style for the social media icons */
+  .box a {
+    display: inline-block;
+    margin: 5px;
+  }
+  
+  .box a i.fa-linkedin {
+    font-size: 24px;
+    color: #0077b5;
+  }
+  
+  .box a i.fa-linkedin:hover {
+    background-color: #0077b5;
+    border-radius: 50%;
+    padding: 5px;
+    color: var(--Soft-Blue);
+    border: 2px solid var(--Soft-Blue);
+    color: rgb(255, 255, 255);
+  }
+  
+  .box a i.fa-github {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .box a i.fa-github:hover {
+    background-color: #333;
+    border-radius: 50%;
+    padding: 5px;
+    color: var(--Soft-Blue);
+    border: 2px solid var(--Soft-Blue);
+    color: rgb(255, 255, 255);
+  }
+  

@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{%  block title %} Connect {% endblock %}
+{%block styles%} <link rel="stylesheet" type="text/css" href= "{{url_for('static', filename= 'css/connect_home_styles.css' ) }}"> {% endblock %}
+
+{%block body %}
+
+<h2 class="heading">🌱 CONNECT WITH YOUR FELLOW FARMERS! 🚜</h2>
+<div class="content">
+  <form method="post" class="buttons">
+    <h3>🌍 Enter The Chat Room</h3>   
+    <div>
+      <label for="name">👤 Name:</label>
+      <input type="text" id="name" placeholder="Pick a name!" name="name" value="{{ name }}" required>
+    </div>
+    <div class="join">
+      <input type="text" placeholder="Enter Room Code" name="code" value="{{ code }}" required>
+      <button type="submit" name="join" class="button btn-primary">🔗 Join a Room</button>
+    </div>
+    <button type="submit" name="create" class="create-btn button btn-secondary">➕ Create a Room</button>
+    {% if error %}
+      <ul class="error-msg">
+        <li>⚠️ {{ error }}</li>
+      </ul>
+    {% endif %}
+  </form>
+</div>
+
+<div class="room_codes">
+  {% if room_codes %}
+  <p>📢 <strong>ACTIVE CHATTING ROOMS:</strong></p>
+  <ul>
+    {% for code in room_codes %}
+      <li><span class="code_title">🔑 ROOM CODE:</span> <span class="code">{{ code }}</span></li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</div>
+
+
+
+{% endblock %}

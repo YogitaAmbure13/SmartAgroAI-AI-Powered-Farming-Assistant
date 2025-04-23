@@ -1,0 +1,157 @@
+{% extends 'layout.html' %}
+
+{% block title %} About {% endblock %}
+
+{% block styles %}  
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/about.css') }}">
+{% endblock %}
+
+{% block body %}
+
+<!-- About Us Section -->
+<h2 class="heading">ABOUT US</h2>
+<section class="about">
+    <div class="about-content">
+        <p> BharatKrishiNirmaan is an AI-powered platform designed to empower farmers with smart agricultural solutions. 
+           Our platform provides real-time insights on weather, plant health, and farming recommendations 
+           to enhance productivity and sustainability.</p>
+    </div>
+</section>
+
+
+<section class="feature-heading">
+    <div class="heading">
+        <h1>🌟 Key Features of BharatKrishiNirmaan</h1>
+        <p>Explore the powerful features that make BharatKrishiNirmaan a game-changer in agriculture.</p>
+    </div>
+</section>
+
+<!-- Feature 1: Weather Forecasting (Image on Right) -->
+<section class="feature right">
+    <div class="feature-content">
+        <div class="text-content">
+            <h2>☁️ Weather Forecasting</h2>
+                <p>Weather plays a crucial role in agriculture, and our AI-powered weather forecasting system provides real-time updates on various weather parameters like temperature, humidity, wind speed, and rainfall.</p>
+                <p>Our system uses satellite data and advanced machine learning models to predict weather patterns accurately. These predictions help farmers plan their activities effectively, reducing the impact of unfavorable weather conditions on their crops.</p>
+                <ol>
+                    <li>🌧️ Prevents crop damage due to unexpected rain or frost.</li>
+                    <li>☀️ Helps in irrigation planning based on upcoming weather conditions.</li>
+                    <li>🌪️ Reduces risks of weather-related crop losses.</li>
+                    <li>🌤️ Improves overall crop health by providing real-time weather data for optimal planting and harvesting decisions.</li>
+                </ol>
+        </div>
+        <img src="{{ url_for('static', filename='images/weatherforcast.jpg') }}" alt="Weather Forecast">
+    </div>
+</section>
+
+<!-- Feature 2: Plant Disease Identification (Image on Left) -->
+<section class="feature left">
+    <div class="feature-content">
+        <img src="{{ url_for('static', filename='images/plantdisease.jpg') }}" alt="Plant Disease Identification">
+        <div class="text-content">
+            <h2>🦠 Plant Disease Prediction (CNN Model)</h2>
+                <p>Diseases can severely impact crop yield, and early detection is essential for preventing significant losses. Our AI-driven disease detection system analyzes plant health by processing images of leaves to identify potential diseases using a Convolutional Neural Network (CNN).</p>
+                <p>The system offers real-time disease detection and provides farmers with treatment recommendations based on AI analysis, improving crop protection and reducing the need for manual inspections.</p>
+                <ol>
+                    <li>🖼️ Farmers upload images of affected leaves for diagnosis.</li>
+                    <li>🧠 AI analyzes leaf patterns to detect diseases.</li>
+                    <li>📊 Provides disease details, such as symptoms, severity, and treatment options.</li>
+                    <li>💡 Helps farmers take preventive measures before the disease spreads.</li>
+                </ol>
+        </div>
+    </div>
+</section>
+
+<!-- Feature 3: Crop Recommendation (Image on Right) -->
+<section class="feature right">
+    <div class="feature-content">
+        <div class="text-content">
+            <h2>🌱 Crop Recommendation</h2>
+                <p>Choosing the right crop for a specific region is critical for maximizing yield and ensuring sustainable farming. Our system utilizes a Random Forest Machine Learning Model to recommend the best crops based on multiple factors:</p>
+                <ol>
+                    <li>🌿  Soil quality: pH, nutrients, and soil texture.</li>
+                    <li>☀️  Weather conditions: Temperature, rainfall, and humidity patterns.</li>
+                    <li>📈 Historical yield data: Trends in past crop yields for specific areas.</li>
+                </ol>
+                <p>This data-driven approach enables farmers to make informed decisions about which crops to plant, improving overall efficiency and ensuring optimal use of resources.</p>
+        </div>
+        <img src="{{ url_for('static', filename='images/croprecommendation.jpg') }}" alt="Crop Recommendation">
+    </div>
+</section>
+
+<!-- Feature 4: Fertilizer Recommendation (Image on Left) -->
+<section class="feature left">
+    <div class="feature-content">
+        <img src="{{ url_for('static', filename='images/fertilizerrecommendation.jpg') }}" alt="Fertilizer Recommendation">
+        <div class="text-content">
+            <h2>🌿 Fertilizer Recommendation</h2>
+                <p>Proper fertilizer use is essential for healthy crop growth and high yield. Our system leverages a Gradient Boosting Model to recommend the best fertilizers based on the following factors:</p>
+                <ol>
+                    <li>🧪 Soil composition: Nutrient levels, pH balance, and texture.</li>
+                    <li>🌾 Crop nutrient requirements: Different crops need specific nutrients for optimal growth.</li>
+                    <li>🌍 Environmental factors: Weather conditions and location-specific recommendations.</li>
+                </ol>
+                <p>By providing **optimal fertilizer suggestions**, our system helps farmers improve crop productivity, minimize waste, and reduce environmental impact.</p>
+        </div>
+    </div>
+</section>
+
+<section class="members" id="members">
+    <div class="heading">
+      <h1>Team Members</h1>
+      <p>Introducing the talented individuals shaping the AgriSens project.</p>
+    </div>
+  
+    <div class="box-container">
+      <div class="box">
+        <img src="images/yogita.jpg" alt="member-1" />
+        <h3>Yogita Ambure</h3>
+        <p>
+          B.Tech | ENTC <br />
+          MIT Academy of Engineering, Pune
+        </p>
+        <a href="http://linkedin.com/in/" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+  
+      <div class="box">
+        <img src="images/sakshi.jpg" alt="member-2" />
+        <h3>Sakshi Paste</h3>
+        <p>
+            B.Tech | ENTC <br />
+            MIT Academy of Engineering, Pune
+        </p>
+        <a
+          href="https://www.linkedin.com/in/"
+          target="_blank"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+  
+      <div class="box">
+        <img src="images/riya.jpg" alt="member-3" />
+        <h3>Riya Hulule</h3>
+        <p>
+            B.Tech | ENTC <br />
+            MIT Academy of Engineering, Pune
+        </p>
+        <a href="https://www.linkedin.com/in/amitkashyap2504" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+
+{% endblock %}
